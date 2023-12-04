@@ -36,7 +36,7 @@ func GetRootByPWD() (string, error) {
 	}
 }
 
-var ignoreList = []string{".git", ".gitignore"}
+var ignoreList = []string{".git", ".gitignore", "node_modules"}
 
 func main() {
 	var manualMode bool
@@ -54,6 +54,6 @@ func main() {
 	if err != nil {
 		return
 	}
-	fmt.Println("Path: ", path)
+	// fmt.Println("Path: ", path)
 	err = scanner.Scan(path, ignoreList, reversedMode)
 }

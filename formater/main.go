@@ -64,7 +64,7 @@ func writeFile(path string, mode os.FileMode, data []byte) error {
 func Format(path string, mode os.FileMode, reversedMode bool) error {
 	data := readFile(path, mode)
 	result := formatData(data, reversedMode)
-	fmt.Println(string(result))
+	// fmt.Println(string(result))
 	err := writeFile(path, mode, result)
 	return err
 }

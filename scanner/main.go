@@ -1,7 +1,6 @@
 package scanner
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -23,7 +22,7 @@ func Scan(path string, ignoreList []string, reversedMode bool) error {
 		fMode := f.Mode()
 
 		if !fMode.IsDir() {
-			fmt.Printf("FILE: %s, %v", filepath, fMode)
+			// fmt.Printf("FILE: %s, %v", filepath, fMode)
 			err = formater.Format(filepath, fMode, reversedMode)
 		}
 		return err
